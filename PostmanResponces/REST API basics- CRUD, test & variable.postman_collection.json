@@ -102,6 +102,73 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"id\": 14,\n    \"assignedTo\": \"Abhinav\",\n    \"status\": \"Completed\",\n    \"dueDate\": \"2024-10-10\",\n    \"priority\": \"High\",\n    \"description\": \"Prepare yearly financial report\",\n    \"comments\": \"Data collection from finance department required.\"\n}"
+				},
+				{
+					"name": "Task added via Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"assignedTo\": \"Deepa\",\r\n  \"status\": \"In Progress\",\r\n  \"dueDate\": \"2024-11-18\",\r\n  \"priority\": \"High\",\r\n  \"description\": \"Finalize project budget\",\r\n  \"comments\": \"Review all expenses and adjust allocations as necessary.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 Sep 2024 16:50:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 26,\n    \"assignedTo\": \"Deepa\",\n    \"status\": \"In Progress\",\n    \"dueDate\": \"2024-11-18\",\n    \"priority\": \"High\",\n    \"description\": \"Finalize project budget\",\n    \"comments\": \"Review all expenses and adjust allocations as necessary.\"\n}"
 				}
 			]
 		},
@@ -206,6 +273,140 @@
 					],
 					"cookie": [],
 					"body": "[\n    {\n        \"id\": 11,\n        \"assignedTo\": \"Meera\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-09-30\",\n        \"priority\": \"Low\",\n        \"description\": \"Review UI design feedback\",\n        \"comments\": \"Incorporate suggestions from design team.\"\n    },\n    {\n        \"id\": 13,\n        \"assignedTo\": \"Vidyut\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2024-10-10\",\n        \"priority\": \"High\",\n        \"description\": \"Prepare yearly financial report\",\n        \"comments\": \"Data collection from finance department required.\"\n    },\n    {\n        \"id\": 14,\n        \"assignedTo\": \"Abhinav\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-10-10\",\n        \"priority\": \"High\",\n        \"description\": \"Prepare yearly financial report\",\n        \"comments\": \"Data collection from finance department required.\"\n    }\n]"
+				},
+				{
+					"name": "Fetching the tasks via GET",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 Sep 2024 16:46:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 13,\n        \"assignedTo\": \"Vidyut\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2024-10-10\",\n        \"priority\": \"High\",\n        \"description\": \"Prepare yearly financial report\",\n        \"comments\": \"Data collection from finance department required.\"\n    },\n    {\n        \"id\": 14,\n        \"assignedTo\": \"Abhinav\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-10-10\",\n        \"priority\": \"High\",\n        \"description\": \"Prepare yearly financial report\",\n        \"comments\": \"Data collection from finance department required.\"\n    },\n    {\n        \"id\": 15,\n        \"assignedTo\": \"Abhinav\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-10-10\",\n        \"priority\": \"High\",\n        \"description\": \"Prepare yearly financial report\",\n        \"comments\": \"Data collection from finance department required.\"\n    },\n    {\n        \"id\": 16,\n        \"assignedTo\": \"Shubham\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-10-03\",\n        \"priority\": \"High\",\n        \"description\": \"Get a job\",\n        \"comments\": \"It would help if you had this.\"\n    }\n]"
+				},
+				{
+					"name": "Fetching the tasks via GET",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 27 Sep 2024 16:51:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 13,\n        \"assignedTo\": \"Vidyut\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2024-10-10\",\n        \"priority\": \"High\",\n        \"description\": \"Prepare yearly financial report\",\n        \"comments\": \"Data collection from finance department required.\"\n    },\n    {\n        \"id\": 14,\n        \"assignedTo\": \"Abhinav\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-10-10\",\n        \"priority\": \"High\",\n        \"description\": \"Prepare yearly financial report\",\n        \"comments\": \"Data collection from finance department required.\"\n    },\n    {\n        \"id\": 15,\n        \"assignedTo\": \"Abhinav\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-10-10\",\n        \"priority\": \"High\",\n        \"description\": \"Prepare yearly financial report\",\n        \"comments\": \"Data collection from finance department required.\"\n    },\n    {\n        \"id\": 16,\n        \"assignedTo\": \"Shubham\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-10-03\",\n        \"priority\": \"High\",\n        \"description\": \"Get a job\",\n        \"comments\": \"It would help if you had this.\"\n    },\n    {\n        \"id\": 17,\n        \"assignedTo\": \"Rahul\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2024-12-01\",\n        \"priority\": \"High\",\n        \"description\": \"Design database schema\",\n        \"comments\": \"Collaborate with the development team to finalize the schema.\"\n    },\n    {\n        \"id\": 18,\n        \"assignedTo\": \"Anita\",\n        \"status\": \"In Progress\",\n        \"dueDate\": \"2024-11-15\",\n        \"priority\": \"Medium\",\n        \"description\": \"Develop user authentication module\",\n        \"comments\": \"Implement OAuth2 for enhanced security.\"\n    },\n    {\n        \"id\": 19,\n        \"assignedTo\": \"Vikram\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-10-30\",\n        \"priority\": \"Low\",\n        \"description\": \"Update project roadmap\",\n        \"comments\": \"Incorporate recent feedback from stakeholders.\"\n    },\n    {\n        \"id\": 20,\n        \"assignedTo\": \"Priya\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2024-12-05\",\n        \"priority\": \"High\",\n        \"description\": \"Conduct user testing\",\n        \"comments\": \"Schedule testing sessions with beta users.\"\n    },\n    {\n        \"id\": 21,\n        \"assignedTo\": \"Suresh\",\n        \"status\": \"In Progress\",\n        \"dueDate\": \"2024-11-20\",\n        \"priority\": \"Medium\",\n        \"description\": \"Integrate payment gateway\",\n        \"comments\": \"Ensure PCI compliance and secure transactions.\"\n    },\n    {\n        \"id\": 22,\n        \"assignedTo\": \"Meena\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2024-12-10\",\n        \"priority\": \"High\",\n        \"description\": \"Prepare marketing materials\",\n        \"comments\": \"Focus on digital channels and social media campaigns.\"\n    },\n    {\n        \"id\": 23,\n        \"assignedTo\": \"Arjun\",\n        \"status\": \"In Progress\",\n        \"dueDate\": \"2024-11-25\",\n        \"priority\": \"High\",\n        \"description\": \"Optimize website performance\",\n        \"comments\": \"Improve load times and ensure mobile responsiveness.\"\n    },\n    {\n        \"id\": 24,\n        \"assignedTo\": \"Nisha\",\n        \"status\": \"Completed\",\n        \"dueDate\": \"2024-10-20\",\n        \"priority\": \"Low\",\n        \"description\": \"Organize team-building event\",\n        \"comments\": \"Finalize venue and activities for the event.\"\n    },\n    {\n        \"id\": 25,\n        \"assignedTo\": \"Karan\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2024-12-15\",\n        \"priority\": \"Medium\",\n        \"description\": \"Implement new analytics dashboard\",\n        \"comments\": \"Integrate with existing data sources and ensure real-time updates.\"\n    },\n    {\n        \"id\": 26,\n        \"assignedTo\": \"Deepa\",\n        \"status\": \"In Progress\",\n        \"dueDate\": \"2024-11-18\",\n        \"priority\": \"High\",\n        \"description\": \"Finalize project budget\",\n        \"comments\": \"Review all expenses and adjust allocations as necessary.\"\n    },\n    {\n        \"id\": 27,\n        \"assignedTo\": \"Deepa\",\n        \"status\": \"In Progress\",\n        \"dueDate\": \"2024-11-18\",\n        \"priority\": \"High\",\n        \"description\": \"Finalize project budget\",\n        \"comments\": \"Review all expenses and adjust allocations as necessary.\"\n    }\n]"
 				}
 			]
 		},
