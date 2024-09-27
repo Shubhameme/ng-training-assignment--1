@@ -33,5 +33,5 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone 
-   cd todo-list
+   git clone https://github.com/Shubhameme/ng-training-assignment--1.git
+   
