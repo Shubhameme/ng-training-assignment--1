@@ -1,0 +1,35 @@
+/* src/components/WelcomePage.css */
+
+.welcome-page {
+    height: 100vh;
+    background-image: url('../gem-salcedo-wRYExi-z8AI-unsplash.jpg');
+    /* Random background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay for contrast */
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btn-success {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    /* Rounded button */
+}
+
+h1 {
+    font-weight: bold;
+    /* Bold text for the title */
+}
+
+p {
+    font-size: 1.2rem;
+    /* Slightly larger font size for the paragraph */
+}
