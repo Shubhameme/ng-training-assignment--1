@@ -169,6 +169,77 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"id\": 26,\n    \"assignedTo\": \"Deepa\",\n    \"status\": \"In Progress\",\n    \"dueDate\": \"2024-11-18\",\n    \"priority\": \"High\",\n    \"description\": \"Finalize project budget\",\n    \"comments\": \"Review all expenses and adjust allocations as necessary.\"\n}"
+				},
+				{
+					"name": "Task added via Post",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"assignedTo\": \"Smita\",\r\n  \"status\": \"In Progress\",\r\n  \"dueDate\": \"2024-11-18\",\r\n  \"priority\": \"High\",\r\n  \"description\": \"Finalize project budget\",\r\n  \"comments\": \"Review all expenses and adjust allocations as necessary.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Location",
+							"value": "http://localhost:8080/api/tasks/30"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Sep 2024 12:57:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 30,\n    \"assignedTo\": \"Smita\",\n    \"status\": \"In Progress\",\n    \"dueDate\": \"2024-11-18\",\n    \"priority\": \"High\",\n    \"description\": \"Finalize project budget\",\n    \"comments\": \"Review all expenses and adjust allocations as necessary.\"\n}"
 				}
 			]
 		},
