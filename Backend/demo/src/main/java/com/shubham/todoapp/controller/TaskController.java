@@ -10,6 +10,7 @@ import com.shubham.todoapp.exception.ResourceNotFoundException;
 import com.shubham.todoapp.repository.TaskRepository;
 
 import java.net.URI;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -19,6 +20,7 @@ public class TaskController {
     @Autowired
     private TaskRepository taskRepository;
 
+    // Create a new Task
     @PostMapping
     public ResponseEntity<Task> createTask(@Valid @RequestBody Task task) {
         Task createdTask = taskRepository.save(task);
@@ -33,6 +35,7 @@ public class TaskController {
         return ResponseEntity.created(location).body(createdTask);
     }
 
+    // Update an existing Task
     @PutMapping("/{id}")
     public ResponseEntity<Task> updateTask(@PathVariable Long id, @RequestBody Task taskDetails) {
         Optional<Task> optionalTask = taskRepository.findById(id);
@@ -57,11 +60,27 @@ public class TaskController {
         }
     }
 
-
+    // Delete a Task
     @DeleteMapping("/{id}")
-    public void deleteTask(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteTask(@PathVariable Long id) {
         Task task = taskRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Task not found with id: " + id));
         taskRepository.delete(task);
+        return ResponseEntity.noContent().build();
+    }
+
+    // Get All Tasks
+    @GetMapping
+    public ResponseEntity<List<Task>> getAllTasks() {
+        List<Task> tasks = taskRepository.findAll();
+        return ResponseEntity.ok(tasks);
+    }
+
+    // Get Task by ID
+    @GetMapping("/{id}")
+    public ResponseEntity<Task> getTaskById(@PathVariable Long id) {
+        Task task = taskRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Task not found with id: " + id));
+        return ResponseEntity.ok(task);
     }
 }
